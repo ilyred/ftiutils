@@ -1,8 +1,15 @@
 # made by red
 
-# local ftiutils = loadstring(game:HttpGet("https://raw.githubusercontent.com/ilyred/ftiutils/main/utils.lua"))()
 
-local function getpath(item)
+local utils = {
+    Objects = setmetatable({}, {__mode="kv"})
+}
+
+
+
+
+
+function utils:getpath(item)
 	v = item
 	p = item.Name .. "."
 	while (true) do
@@ -18,12 +25,12 @@ local function getpath(item)
 end
 
 
-local function cframetov3(cf) 
+local function utils:cframetov3(cf) 
    return Vector3.new(cf.X, cf.Y, cf.Z)
 end
 
 
-local function resolvename(name)
+local function utils:resolvename(name)
     if not players:FindFirstChild(name) then
         for _,player in pairs(players:GetPlayers()) do
     		if player.DisplayName == display then return player.name end
@@ -35,7 +42,7 @@ local function resolvename(name)
 end
 
 
-local function displaytoname(display) 
+local function utils:displaytoname(display) 
 	for _,player in pairs(players:GetPlayers()) do
 		if player.DisplayName == display then
 			return player.name
@@ -43,3 +50,5 @@ local function displaytoname(display)
 	end
 	return ""
 end
+
+return utils

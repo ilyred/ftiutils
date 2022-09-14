@@ -1,5 +1,6 @@
 # made by red
 
+# local ftiutils = loadstring(game:HttpGet("https://raw.githubusercontent.com/ilyred/ftiutils/main/utils.lua"))()
 
 local function getpath(item)
 	v = item

@@ -1,3 +1,5 @@
+-- util lib - https://github.com/ilyred
+
 local players = game:GetService("Players")
 
 local utils = {
